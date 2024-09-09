@@ -21,3 +21,13 @@ const testBill = 100;
 const testTip = calculateTip(testBill);
 
 console.log(` Considering the bill $${testBill}, the tip is $${ testTip}, and the total value is $${(testBill + testTip)} `);
+
+//Utilize Arrays Using Data Set 1
+
+const bills = [275, 40, 430]; 
+const tips = bills.map(bill => calculateTip(bill));
+const totals = bills.map((bill, index) => bill + tips[index]);
+
+console.log('Bills Amount:', bills);
+console.log('Tips Amount:', tips);
+console.log('Totals:', totals);
